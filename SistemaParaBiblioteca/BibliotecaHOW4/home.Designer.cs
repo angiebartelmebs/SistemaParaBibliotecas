@@ -36,11 +36,11 @@ namespace BibliotecaHOW4
             this.manutençãoAlterarInativarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.EmprestimoDeLivrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saidaDeLivroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.retornoDeLivroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.empréstimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retornoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +52,8 @@ namespace BibliotecaHOW4
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.leitorToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.EmprestimoDeLivrosToolStripMenuItem});
+            this.ToolStripMenuItem2,
+            this.empréstimoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
@@ -99,34 +99,13 @@ namespace BibliotecaHOW4
             this.cadastarToolStripMenuItem.Text = "Cadastar/Editar";
             this.cadastarToolStripMenuItem.Click += new System.EventHandler(this.cadastarToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // ToolStripMenuItem2
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(136, 24);
-            this.toolStripMenuItem1.Text = "Estoque de Livros";
-            // 
-            // EmprestimoDeLivrosToolStripMenuItem
-            // 
-            this.EmprestimoDeLivrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saidaDeLivroToolStripMenuItem,
-            this.retornoDeLivroToolStripMenuItem});
-            this.EmprestimoDeLivrosToolStripMenuItem.Name = "EmprestimoDeLivrosToolStripMenuItem";
-            this.EmprestimoDeLivrosToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
-            this.EmprestimoDeLivrosToolStripMenuItem.Text = "Empréstimo";
-            this.EmprestimoDeLivrosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.EmprestimoDeLivrosToolStripMenuItem.Click += new System.EventHandler(this.estoqueDeLivrosToolStripMenuItem_Click);
-            // 
-            // saidaDeLivroToolStripMenuItem
-            // 
-            this.saidaDeLivroToolStripMenuItem.Name = "saidaDeLivroToolStripMenuItem";
-            this.saidaDeLivroToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.saidaDeLivroToolStripMenuItem.Text = "Saída ";
-            // 
-            // retornoDeLivroToolStripMenuItem
-            // 
-            this.retornoDeLivroToolStripMenuItem.Name = "retornoDeLivroToolStripMenuItem";
-            this.retornoDeLivroToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.retornoDeLivroToolStripMenuItem.Text = "Retorno";
+            this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(115, 24);
+            this.ToolStripMenuItem2.Text = "Estoque Livros";
+            this.ToolStripMenuItem2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.ToolStripMenuItem2.Click += new System.EventHandler(this.estoqueDeLivrosToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -139,6 +118,29 @@ namespace BibliotecaHOW4
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // empréstimoToolStripMenuItem
+            // 
+            this.empréstimoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saídaToolStripMenuItem,
+            this.retornoToolStripMenuItem});
+            this.empréstimoToolStripMenuItem.Name = "empréstimoToolStripMenuItem";
+            this.empréstimoToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.empréstimoToolStripMenuItem.Text = "Empréstimo";
+            // 
+            // saídaToolStripMenuItem
+            // 
+            this.saídaToolStripMenuItem.Name = "saídaToolStripMenuItem";
+            this.saídaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.saídaToolStripMenuItem.Text = "Retirada";
+            this.saídaToolStripMenuItem.Click += new System.EventHandler(this.saídaToolStripMenuItem_Click);
+            // 
+            // retornoToolStripMenuItem
+            // 
+            this.retornoToolStripMenuItem.Name = "retornoToolStripMenuItem";
+            this.retornoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.retornoToolStripMenuItem.Text = "Retorno";
+            this.retornoToolStripMenuItem.Click += new System.EventHandler(this.retornoToolStripMenuItem_Click);
             // 
             // home
             // 
@@ -176,9 +178,9 @@ namespace BibliotecaHOW4
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem leitorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem EmprestimoDeLivrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem saidaDeLivroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem retornoDeLivroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem empréstimoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saídaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem retornoToolStripMenuItem;
     }
 }

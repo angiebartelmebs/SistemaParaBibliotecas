@@ -89,5 +89,32 @@ namespace BibliotecaHOW4
         {
             Application.Run(new Estoque());
         }
+     
+
+        private void saídaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            nt = new Thread(logRetirada);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+
+        private void logRetirada()
+        {
+            Application.Run(new EmprestimoLivro());
+        }
+
+        private void retornoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            nt = new Thread(logRetorno);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+
+        private void logRetorno()
+        {
+            Application.Run(new RetornoLivro());
+        }
     }
 }
