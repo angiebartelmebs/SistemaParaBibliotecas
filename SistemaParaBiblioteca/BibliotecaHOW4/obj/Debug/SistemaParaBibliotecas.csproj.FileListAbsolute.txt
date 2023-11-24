@@ -13,7 +13,6 @@ D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\bin\Debug\K4os.
 D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\bin\Debug\System.Numerics.Vectors.dll
 D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\bin\Debug\MySql.Data.xml
 D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\obj\Debug\SistemaParaBibliotecas.csproj.AssemblyReference.cache
-D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\obj\Debug\SistemaParaBibliotecas.csproj.SuggestedBindingRedirects.cache
 D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\obj\Debug\BibliotecaHOW4.exe.config
 D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\obj\Debug\BibliotecaHOW4.CadastroLivro.resources
 D:\Curso\HOW9 -2023\Projeto\SistemaParaBiblioteca\BibliotecaHOW4\obj\Debug\BibliotecaHOW4.EmprestimoLivro.resources

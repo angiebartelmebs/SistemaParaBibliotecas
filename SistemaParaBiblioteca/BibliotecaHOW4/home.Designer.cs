@@ -37,10 +37,10 @@ namespace BibliotecaHOW4
             this.leitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.empréstimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retornoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,18 +107,6 @@ namespace BibliotecaHOW4
             this.ToolStripMenuItem2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.ToolStripMenuItem2.Click += new System.EventHandler(this.estoqueDeLivrosToolStripMenuItem_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1316, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // empréstimoToolStripMenuItem
             // 
             this.empréstimoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -131,16 +119,28 @@ namespace BibliotecaHOW4
             // saídaToolStripMenuItem
             // 
             this.saídaToolStripMenuItem.Name = "saídaToolStripMenuItem";
-            this.saídaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.saídaToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.saídaToolStripMenuItem.Text = "Retirada";
             this.saídaToolStripMenuItem.Click += new System.EventHandler(this.saídaToolStripMenuItem_Click);
             // 
             // retornoToolStripMenuItem
             // 
             this.retornoToolStripMenuItem.Name = "retornoToolStripMenuItem";
-            this.retornoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.retornoToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.retornoToolStripMenuItem.Text = "Retorno";
             this.retornoToolStripMenuItem.Click += new System.EventHandler(this.retornoToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1316, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // home
             // 
@@ -161,6 +161,7 @@ namespace BibliotecaHOW4
             this.Name = "home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
+            this.Load += new System.EventHandler(this.home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

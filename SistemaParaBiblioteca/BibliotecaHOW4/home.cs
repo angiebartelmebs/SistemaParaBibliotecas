@@ -116,5 +116,10 @@ namespace BibliotecaHOW4
         {
             Application.Run(new RetornoLivro());
         }
+
+        private void home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

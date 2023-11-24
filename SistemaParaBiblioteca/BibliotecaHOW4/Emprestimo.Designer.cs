@@ -39,21 +39,25 @@ namespace BibliotecaHOW4
             this.tbCPFsaida = new System.Windows.Forms.TextBox();
             this.tbNomeSaida = new System.Windows.Forms.TextBox();
             this.tbTelefoneSaida = new System.Windows.Forms.TextBox();
-            this.tbDescricao = new System.Windows.Forms.TextBox();
+            this.tbDescricaoSaida = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbEmailSaida = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtRetira = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtVolta = new System.Windows.Forms.DateTimePicker();
+            this.dgEmprestimo = new System.Windows.Forms.DataGridView();
             this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDtadeRetirada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDtadeRetorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btPesquisa = new System.Windows.Forms.Button();
+            this.btInclui = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dUpDLivro = new System.Windows.Forms.DomainUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEmprestimo)).BeginInit();
             this.SuspendLayout();
             // 
             // IDsaida
@@ -139,14 +143,14 @@ namespace BibliotecaHOW4
             this.tbTelefoneSaida.Size = new System.Drawing.Size(168, 24);
             this.tbTelefoneSaida.TabIndex = 28;
             // 
-            // tbDescricao
+            // tbDescricaoSaida
             // 
-            this.tbDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescricao.Location = new System.Drawing.Point(439, 277);
-            this.tbDescricao.Multiline = true;
-            this.tbDescricao.Name = "tbDescricao";
-            this.tbDescricao.Size = new System.Drawing.Size(369, 83);
-            this.tbDescricao.TabIndex = 29;
+            this.tbDescricaoSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescricaoSaida.Location = new System.Drawing.Point(439, 277);
+            this.tbDescricaoSaida.Multiline = true;
+            this.tbDescricaoSaida.Name = "tbDescricaoSaida";
+            this.tbDescricaoSaida.Size = new System.Drawing.Size(369, 83);
+            this.tbDescricaoSaida.TabIndex = 29;
             // 
             // label1
             // 
@@ -168,12 +172,12 @@ namespace BibliotecaHOW4
             this.tbEmailSaida.TabIndex = 31;
             this.tbEmailSaida.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // dateTimePicker1
+            // dtRetira
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(44, 199);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dtRetira.Location = new System.Drawing.Point(44, 199);
+            this.dtRetira.Name = "dtRetira";
+            this.dtRetira.Size = new System.Drawing.Size(202, 20);
+            this.dtRetira.TabIndex = 32;
             // 
             // label2
             // 
@@ -196,27 +200,28 @@ namespace BibliotecaHOW4
             this.label3.Text = "Data de Retorno";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dateTimePicker2
+            // dtVolta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(269, 199);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePicker2.TabIndex = 35;
+            this.dtVolta.Location = new System.Drawing.Point(269, 199);
+            this.dtVolta.Name = "dtVolta";
+            this.dtVolta.Size = new System.Drawing.Size(202, 20);
+            this.dtVolta.TabIndex = 35;
             // 
-            // dataGridView1
+            // dgEmprestimo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgEmprestimo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgEmprestimo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColID,
             this.ColNome,
             this.ColLivro,
             this.ColDtadeRetirada,
             this.ColDtadeRetorno,
             this.ColObs});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 398);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(870, 165);
-            this.dataGridView1.TabIndex = 54;
+            this.dgEmprestimo.Location = new System.Drawing.Point(12, 398);
+            this.dgEmprestimo.Name = "dgEmprestimo";
+            this.dgEmprestimo.Size = new System.Drawing.Size(870, 165);
+            this.dgEmprestimo.TabIndex = 54;
+            this.dgEmprestimo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ColID
             // 
@@ -260,6 +265,50 @@ namespace BibliotecaHOW4
             this.ColObs.Name = "ColObs";
             this.ColObs.Width = 300;
             // 
+            // btPesquisa
+            // 
+            this.btPesquisa.BackColor = System.Drawing.Color.LightCyan;
+            this.btPesquisa.BackgroundImage = global::BibliotecaHOW4.Properties.Resources.seo;
+            this.btPesquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btPesquisa.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
+            this.btPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPesquisa.Location = new System.Drawing.Point(817, 199);
+            this.btPesquisa.Name = "btPesquisa";
+            this.btPesquisa.Size = new System.Drawing.Size(47, 45);
+            this.btPesquisa.TabIndex = 56;
+            this.btPesquisa.UseVisualStyleBackColor = false;
+            // 
+            // btInclui
+            // 
+            this.btInclui.BackColor = System.Drawing.Color.LightCyan;
+            this.btInclui.BackgroundImage = global::BibliotecaHOW4.Properties.Resources.add_file;
+            this.btInclui.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btInclui.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
+            this.btInclui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInclui.Location = new System.Drawing.Point(818, 139);
+            this.btInclui.Name = "btInclui";
+            this.btInclui.Size = new System.Drawing.Size(46, 51);
+            this.btInclui.TabIndex = 55;
+            this.btInclui.UseVisualStyleBackColor = false;
+            this.btInclui.Click += new System.EventHandler(this.btInclui_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 252);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 21);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Livro";
+            // 
+            // dUpDLivro
+            // 
+            this.dUpDLivro.Location = new System.Drawing.Point(47, 277);
+            this.dUpDLivro.Name = "dUpDLivro";
+            this.dUpDLivro.Size = new System.Drawing.Size(323, 20);
+            this.dUpDLivro.TabIndex = 58;
+            // 
             // EmprestimoLivro
             // 
             this.AllowDrop = true;
@@ -267,14 +316,18 @@ namespace BibliotecaHOW4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(894, 598);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dUpDLivro);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btPesquisa);
+            this.Controls.Add(this.btInclui);
+            this.Controls.Add(this.dgEmprestimo);
+            this.Controls.Add(this.dtVolta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtRetira);
             this.Controls.Add(this.tbEmailSaida);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbDescricao);
+            this.Controls.Add(this.tbDescricaoSaida);
             this.Controls.Add(this.tbTelefoneSaida);
             this.Controls.Add(this.tbNomeSaida);
             this.Controls.Add(this.tbCPFsaida);
@@ -288,7 +341,8 @@ namespace BibliotecaHOW4
             this.Name = "EmprestimoLivro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saída de Livro";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.EmprestimoLivro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgEmprestimo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,19 +359,23 @@ namespace BibliotecaHOW4
         private System.Windows.Forms.TextBox tbCPFsaida;
         private System.Windows.Forms.TextBox tbNomeSaida;
         private System.Windows.Forms.TextBox tbTelefoneSaida;
-        private System.Windows.Forms.TextBox tbDescricao;
+        private System.Windows.Forms.TextBox tbDescricaoSaida;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbEmailSaida;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtRetira;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtVolta;
+        private System.Windows.Forms.DataGridView dgEmprestimo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDtadeRetirada;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDtadeRetorno;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColObs;
+        private System.Windows.Forms.Button btInclui;
+        private System.Windows.Forms.Button btPesquisa;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DomainUpDown dUpDLivro;
     }
 }

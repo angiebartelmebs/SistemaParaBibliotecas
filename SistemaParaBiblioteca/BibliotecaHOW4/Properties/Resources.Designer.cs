@@ -63,6 +63,16 @@ namespace BibliotecaHOW4.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_file {
+            get {
+                object obj = ResourceManager.GetObject("add-file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copia_de_seguranca {
             get {
                 object obj = ResourceManager.GetObject("copia-de-seguranca", resourceCulture);
@@ -76,6 +86,16 @@ namespace BibliotecaHOW4.Properties {
         internal static System.Drawing.Bitmap limpar_limpo {
             get {
                 object obj = ResourceManager.GetObject("limpar-limpo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seo {
+            get {
+                object obj = ResourceManager.GetObject("seo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
